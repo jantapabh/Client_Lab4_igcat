@@ -9,7 +9,7 @@ function App() {
   let x = 0;
   return (
     <div className="App">
-      <Icon value={x} value2={10} />
+      <Icon />
     </div>
   );
 }
