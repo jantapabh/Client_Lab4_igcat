@@ -17,17 +17,21 @@ import axios from 'axios';
 
 // } 
 
+const url ='http://api.openweathermap.org/data/2.5/weather?q=83000,th&units=metric&appid=fd68c0f2039c5a25f666a9ff374bc93e';
+
 function App() {
 
 
-  const getWeather = async () => {
+  const getWeather = () => {
 
-   await  axios.get(url);
+    axios.get(url).then(res => {
+
+        console.log(res);
+
+    });
 
   }
-
-  const url ='http://api.openweathermap.org/data/2.5/weather?q=83000,th&units=metric&appid=fd68c0f2039c5a25f666a9ff374bc93e';
-
+ 
 
    useEffect(() => {
 
