@@ -9,7 +9,7 @@ import axios from 'axios';
 
 // const fetchData = async () => {
 
- 
+
 //   const fetchData = await axios.get(URL);
 //   const respone =  await fetchData.json();
 
@@ -17,33 +17,26 @@ import axios from 'axios';
 
 // } 
 
-const url ='http://api.openweathermap.org/data/2.5/weather?q=83000,th&units=metric&appid=fd68c0f2039c5a25f666a9ff374bc93e';
+const url = 'http://api.openweathermap.org/data/2.5/weather?q=83000,th&units=metric&appid=fd68c0f2039c5a25f666a9ff374bc93e';
 
 function App() {
 
+  const getWeather = async () => {
 
-  const getWeather = () => {
-
-    axios.get(url).then(res => {
-
-        console.log(res);
-
-    });
+    let res = await axios.get(url);
+    console.log(res.data.main.temp);
 
   }
- 
 
-   useEffect(() => {
+  useEffect(() => {
+    getWeather()
 
-   getWeather()
-
-    
-   }, []);
+  }, []);
 
 
 
   // let [counts, setCounts] = useState([0,0,0]);
-  
+
   // let handleClick = (index) => {
 
   //  // edit word
@@ -59,8 +52,8 @@ function App() {
 
   return (
     <div className="App">
-        
-     <Icon />
+
+      <Icon />
 
     </div>
   );
