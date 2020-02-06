@@ -13,6 +13,8 @@ function App() {
 
   }
 
+  //ถ้าต้องการส่ง handleClick ไปยัง icon ได้
+
   return (
     <div className="App">
       <Icon count={handleClick}/>
