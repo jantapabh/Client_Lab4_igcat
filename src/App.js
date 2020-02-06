@@ -5,9 +5,11 @@ import Icon from './components/Icon';
 
 
 function App() {
+
+  let x = 0;
   return (
     <div className="App">
-      <Icon />
+      <Icon value={x} value2={10} />
     </div>
   );
 }

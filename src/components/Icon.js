@@ -1,16 +1,11 @@
 import React from 'react';
 
 
-const Icon = () => {
+
+const Icon = props => {
 
     return (
-        <div>
-
-
-Jan
-
-
-        </div>
+     <div> icon: {props.value} {props.value2} </div>
     )
 
 }
