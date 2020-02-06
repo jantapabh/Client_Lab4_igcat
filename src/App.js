@@ -6,18 +6,33 @@ import Icon from './components/Icon';
 
 function App() {
 
-  let [count, setCount] = useState(0);
-  let handleClick = () => {
+  let [counts, setCounts] = useState([0,0,0]);
+  
+  // let handleClick = () => {
 
-   setCount(count+1)
+  //   setCount(count + 1)
 
-  }
+  // }
 
   //ถ้าต้องการส่ง handleClick ไปยัง icon ได้
 
   return (
     <div className="App">
-      <Icon count={handleClick}/>
+    {
+
+      counts.map((count,index) => {
+
+        return  <Icon key={index} count={count} />
+
+      }) 
+    }
+     {/* {
+       [
+         <Icon counts={counts[0]} />,
+         <Icon counts={counts[1]} />,
+         <Icon counts={counts[2]} />
+       ]
+     } */}
     </div>
   );
 }
